@@ -62,18 +62,17 @@ Horizontal Timing:
 - [x] Power sequence setup
 - [ ] Testing and validation
 
-## Notes
+## Software Notes
 
 The initialization sequence includes:
 - Power management configuration (B8 register for 2-power mode)
 - DSI lane configuration (BA register)
 - Gamma correction settings (E0 register)
 - GIP (Gate In Panel) timing configuration (E9/EA registers)
-- Touch controller I2C configuration
 
 ## Adapter
 
-In order to connect the display to the Lyra, you need will to construct an adapter with the following pinout:
+In order to connect the display to the Lyra, the adapter has the following pinout:
 | Lyra Pin # | Display Pin # | Signal Name      | Description                       | Connection               |
 |------------|---------------|------------------|-----------------------------------|--------------------------|
 | 4          | 1             | LEDK             | Backlight Cathode                 | (See circuit)            |
@@ -106,3 +105,16 @@ In order to connect the display to the Lyra, you need will to construct an adapt
 | NC         | 28            | TP_RST           | Touchpad                          | GPIO1_C4                 |
 | NC         | 29            | TP_VCI           | Touchpad                          | VCC                      |
 | NC         | 30            | GND              | Ground                            |                          |
+
+## Design Notes
+
+ I've designed the board as a 4 layer board with 2 grounds, after using jlcpcb's controlled impedance calculator with an impedance of 100 ohms.
+Trace width: 0.2012
+spacing: 0.2000
+material: JLC4161H-7628
+L1/L2 and L3/L4 spacing: 0.2104 mm
+
+KiCad reports no inter-pair skew, nor is there any intra-pair skew.
+
+<img width="1122" height="1127" alt="image" src="https://github.com/user-attachments/assets/df31eda0-3203-4741-8635-ed79f441fa4e" />
+
