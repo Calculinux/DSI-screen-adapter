@@ -1140,7 +1140,7 @@
 	(footprint "Symbol:OSHW-Logo2_9.8x8mm_SilkScreen"
 		(layer "F.Cu")
 		(uuid "73262c00-1799-4dab-bc00-6594d1dd3615")
-		(at 112 74.5)
+		(at 112.25 72.75)
 		(descr "Open Source Hardware Symbol")
 		(tags "Logo Symbol OSHW")
 		(property "Reference" "REF**"
@@ -3583,6 +3583,18 @@
 		)
 		(layer "Edge.Cuts")
 		(uuid "fe05ddcc-fc86-44d3-af45-e97740150fa2")
+	)
+	(gr_text "https://calculinux.org/"
+		(at 103.5 78 0)
+		(layer "F.SilkS")
+		(uuid "721d6856-adc3-4e56-b15a-861933557995")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+			(justify left bottom)
+		)
 	)
 	(segment
 		(start 117.7575 69.25)
