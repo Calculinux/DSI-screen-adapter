@@ -253,7 +253,9 @@
 };
 
 /**********display**********/
+/* Stock PicoCalc disables &cma; DSI needs a 32MiB pool. */
 &cma {
+	status = "okay";
 	size = <0x2000000>;
 };
 
